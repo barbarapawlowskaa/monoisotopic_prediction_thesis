@@ -1,6 +1,6 @@
 # Prediction of monoisotopic peak masses in large biopolymers
 
-**Master's thesis project**
+**Master's Thesis project**
 
 Barbara Pawłowska (477701)  
 Bioinformatics and Systems Biology  
@@ -11,8 +11,7 @@ Supervisor: Michał Startek, PhD
 ## About the project
 
 This repository contains the computational pipeline developed for the
-master's thesis *Prediction of Monoisotopic Peak Masses in Large
-Biopolymers*.
+Master's Thesis *Prediction of monoisotopic peak masses in large biopolymers*.
 
 The goal is to predict the position of the monoisotopic peak in a
 protein mass spectrum, corresponding to a molecule composed entirely of
@@ -32,8 +31,8 @@ physically motivated orthogonal basis:
 | **V1** | Mass vector |
 | **V2** | Variance of the isotopic envelope vector |
 | **V3** | Mass defect contribution vector |
-| **V4** | Null-space direction |
-| **V5** | Null-space direction |
+| **V4** | Null-space direction vector |
+| **V5** | Null-space direction vector |
 
 The null-space directions are determined analytically so that the
 reconstructed formula lies on the Averagine ray.
@@ -47,7 +46,7 @@ benchmarked against the Envemind algorithm. All spectra are generated
 with IsoSpecPy, and the Wasserstein distance is used throughout to
 compare isotopic distributions.
 
-## Repository Structure
+## Repository structure
 
 ```text
 .
@@ -109,12 +108,12 @@ No additional download or `--fasta` argument is required when running
 the pipeline with the default settings. The file is automatically used
 by `run_all.py` through its default `--fasta` path.
 
-If the FASTA file is not included in the repository, it can be
+The FASTA file is not included in the repository due to it's size and can be
 downloaded from UniProt:
 
 https://www.uniprot.org/downloads#uniprotkb
 
-## How to Run
+## How to run
 
 Run the complete pipeline:
 
@@ -128,7 +127,7 @@ Run only specific steps:
 python scripts/run_all.py --steps 07 10 11
 ```
 
-Run the full protein-scale analysis:
+Run only the full protein-scale analysis:
 
 ```bash
 python scripts/run_all.py --steps 13 14 15
@@ -136,11 +135,23 @@ python scripts/run_all.py --steps 13 14 15
 
 The FASTA file is automatically read from
 `data/uniprot_sprot.fasta.gz`.
+Run Step 13 on custom FASTA file (e.g. data/my_proteins.fasta.gz):
+
+```bash
+python run_all.py --steps 13 --fasta data/my_proteins.fasta.gz
+```
 
 Run a quick test on shorter proteins:
 
 ```bash
 python scripts/run_all.py --steps 13 14 --max-length 300
+```
+
+Run a larger protein-scale analysis with no protein length limit and
+and bigger protein count:
+
+```bash
+python run_all.py --steps 13 14 15 --max-length 0 --max-proteins 20000
 ```
 
 Any individual `stepNN_*.py` script can also be run directly. For
@@ -172,21 +183,21 @@ more computationally demanding.
 
 | Step | Description |
 |------|-------------|
-| 00 | Shared utilities: constants, formula parsing, spectrum variance, peak aggregation |
-| 01 | Averagine scaling model — mass → estimated formula |
-| 02 | IsoSpec + Wasserstein distance sanity check (bovine insulin vs. mock spectrum) |
+| 00 | Shared utilities (e.g. formula parsing, spectrum variance, peak aggregation) |
+| 01 | Averagine scaling model |
+| 02 | IsoSpec & Wasserstein distance check (bovine insulin vs. mock spectrum) |
 | 03 | Averagine fit to insulin via ±5 H grid search using Wasserstein distance |
-| 04 | Per-element fractional mass defect — physical motivation for V3 |
-| 05 | Baryon composition analysis: insulin vs. its Averagine approximation |
-| 06 | Monte Carlo search for the maximum baryon-defect direction orthogonal to Averagine |
+| 04 | Per-element fractional mass defect (physical motivation for V3) |
+| 05 | Baryon composition analysis, insulin vs. its Averagine approximation |
+| 06 | Monte Carlo search for the maximum defect direction orthogonal to Averagine |
 | 07 | Early 2D model (Averagine/mass vector + variance gradient) |
-| 08 | **Core module** — constructs V1, V2, and V3 via Gram–Schmidt; includes `get_residue_h` correction |
-| 09 | Basis diagnostics: V1+V2 vs. V1+V3 sub-models and unit-step sensitivity |
-| 10 | Unit-step sensitivity at 1× and 10× insulin scale, including ΔH tracking |
-| 11 | Completion of the basis: V4 and V5 obtained from the SVD null space |
+| 08 | Core module, constructs V1, V2, and V3 via Gram–Schmidt |
+| 09 | Basis diagnostics, V1+V2 vs. V1+V3 sub-models and unit-step sensitivity |
+| 10 | Unit-step sensitivity at 1× and 10× insulin scale |
+| 11 | Completion of the basis, V4 and V5 obtained from the SVD null space |
 | 12 | Full 5D reconstruction with the closed-form α, β solution |
 | 13 | UniProt FASTA parsing and molecular formula generation |
-| 14 | Full 5D pipeline over all proteins; monoisotopic mass distance analysis |
+| 14 | Full 5D pipeline over all proteins with monoisotopic mass distance analysis |
 | 15 | Benchmark against Envemind |
 | 16 | Standalone conceptual 5D basis diagram |
 
@@ -196,7 +207,7 @@ implementation.
 `step08` serves as the core module and is imported by all subsequent
 steps from Step 09 onward.
 
-## Output Files
+## Output files
 
 All figures (`.png`) are saved to `figures/`, while all generated data
 files (`.csv`, `.txt`) are saved to `results/`.
