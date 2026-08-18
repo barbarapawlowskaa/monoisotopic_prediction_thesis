@@ -139,7 +139,7 @@ The FASTA file is automatically read from
 Run Step 13 on custom FASTA file (e.g. data/my_proteins.fasta.gz):
 
 ```bash
-python run_all.py --steps 13 --fasta data/my_proteins.fasta.gz
+python scripts/run_all.py --steps 13 --fasta data/my_proteins.fasta.gz
 ```
 
 Run a quick test on shorter proteins:
@@ -152,7 +152,7 @@ Run a larger protein-scale analysis with no protein length limit and
 and bigger protein count:
 
 ```bash
-python run_all.py --steps 13 14 15 --max-length 0 --max-proteins 20000
+python scripts/run_all.py --steps 13 14 15 --max-length 0 --max-proteins 20000
 ```
 
 Any individual `stepNN_*.py` script can also be run directly. For
