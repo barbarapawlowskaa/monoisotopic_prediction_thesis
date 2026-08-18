@@ -1,4 +1,4 @@
-# Prediction of Monoisotopic Peak Masses in Large Biopolymers
+# Prediction of monoisotopic peak masses in large biopolymers
 
 **Master's thesis project**
 
@@ -8,7 +8,7 @@ University of Warsaw
 
 Supervisor: Michał Startek, PhD
 
-## About the Project
+## About the project
 
 This repository contains the computational pipeline developed for the
 master's thesis *Prediction of Monoisotopic Peak Masses in Large
@@ -29,9 +29,9 @@ physically motivated orthogonal basis:
 
 | Vector | Interpretation |
 |--------|----------------|
-| **V1** | Total average mass |
-| **V2** | Variance of the isotopic envelope |
-| **V3** | Mass defect contribution |
+| **V1** | Mass vector |
+| **V2** | Variance of the isotopic envelope vector |
+| **V3** | Mass defect contribution vector |
 | **V4** | Null-space direction |
 | **V5** | Null-space direction |
 
