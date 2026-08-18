@@ -135,6 +135,7 @@ python scripts/run_all.py --steps 13 14 15
 
 The FASTA file is automatically read from
 `data/uniprot_sprot.fasta.gz`.
+
 Run Step 13 on custom FASTA file (e.g. data/my_proteins.fasta.gz):
 
 ```bash
