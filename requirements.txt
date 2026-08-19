@@ -1,0 +1,17 @@
+# requirements.txt
+#
+# Install everything with:
+#   pip install -r requirements.txt
+#
+# Python 3.10 or higher is required.
+#
+# Envemind  is installed directly from its GitHub repository, so a working `git` 
+# installation is required on your system before running pip install. 
+# If git is not already available, install it from https://git-scm.com/downloads first.
+
+
+IsoSpecPy
+numpy
+matplotlib
+pandas
+git+https://github.com/PiotrRadzinski/envemind.git
