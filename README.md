@@ -3,7 +3,6 @@
 **Master's Thesis code repository**
 
 Barbara Pawłowska
-
 Bioinformatics and Systems Biology  
 University of Warsaw  
 
