@@ -2,7 +2,7 @@
 
 **Master's Thesis code repository**
 
-Barbara Pawłowska (477701)  
+Barbara Pawłowska
 Bioinformatics and Systems Biology  
 University of Warsaw  
 
