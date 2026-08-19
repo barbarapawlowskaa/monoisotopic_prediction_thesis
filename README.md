@@ -82,7 +82,7 @@ pip install -r requirements.txt
 ```
 
 The main dependencies are IsoSpecPy, NumPy, matplotlib, pandas, and
-`envemind` (Step 15 only).
+`envemind` (`step15` only).
 
 `envemind` is installed directly from its
 [GitHub repository](https://github.com/PiotrRadzinski/envemind).
@@ -203,7 +203,7 @@ Each script contains a detailed docstring describing its purpose and
 implementation.
 
 `step08` serves as the core module and is imported by all subsequent
-steps from Step 09 onward.
+steps from `step09` onward.
 
 ## Output files
 
