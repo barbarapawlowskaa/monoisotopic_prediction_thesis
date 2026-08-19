@@ -18,9 +18,9 @@ protein mass spectrum, corresponding to a molecule composed entirely of
 the lightest stable isotopes of its constituent elements.
 
 For small molecules, this peak is directly observable. However, for
-proteins above 10–15 kDa, it typically falls below the detection limit
-of most instruments. Predicting its position from the observed isotopic
-envelope is therefore an important problem in top-down proteomics.
+proteins above 10–15 kDa it typically falls below the detection limit
+of most instruments. For that reason, predicting its position from the observed 
+isotopic envelope is an important problem in top-down proteomics.
 
 The method represents each protein's elemental composition as a vector
 in a five-dimensional space over {C, H, N, O, S} and constructs a
@@ -63,8 +63,8 @@ compare isotopic distributions.
 
 All `stepNN_*.py` scripts and `run_all.py` are located in `scripts/`.
 
-Outputs are always written to `figures/` and `results/` at the project
-root. This holds whether `run_all.py` is run from the project root or
+Outputs are written to `figures/` and `results/` at the project root. 
+This holds whether `run_all.py` is run from the project root or
 an individual `stepNN_*.py` script is run directly from inside
 `scripts/`. The output location does not depend on the directory from
 which Python is launched.
@@ -149,7 +149,7 @@ python scripts/run_all.py --steps 13 14 --max-length 300
 ```
 
 Run a larger protein-scale analysis with no protein length limit and
-and bigger protein count:
+and a bigger protein count:
 
 ```bash
 python scripts/run_all.py --steps 13 14 15 --max-length 0 --max-proteins 20000
@@ -177,7 +177,7 @@ python scripts/run_all.py -h
 The 6000-protein / 500-aa configuration corresponds to the analysis
 reported in the thesis and runs in a reasonable time on a standard
 laptop. A full unrestricted Swiss-Prot analysis
-(`--max-length 0` with a larger `--max-proteins` value) is considerably
+(`--max-length 0` with a larger `--max-proteins` value) is
 more computationally demanding.
 
 ## Pipeline Steps
@@ -194,9 +194,9 @@ more computationally demanding.
 | 07 | Early 2D model (Averagine/mass vector + variance gradient) |
 | 08 | Core module, constructs V1, V2, and V3 via Gram–Schmidt |
 | 09 | Basis diagnostics, V1+V2 vs. V1+V3 sub-models and unit-step sensitivity |
-| 10 | Unit-step sensitivity at 1× and 10× insulin scale |
-| 11 | Completion of the basis, V4 and V5 obtained from the SVD null space |
-| 12 | Full 5D reconstruction with the closed-form α, β solution |
+| 10 | Unit-step sensitivity at 1x and 10x insulin scale |
+| 11 | Completion of the basis with V4 and V5 obtained from the SVD null space |
+| 12 | Full 5D reconstruction with the closed-form α & β solution |
 | 13 | UniProt FASTA parsing and molecular formula generation |
 | 14 | Full 5D pipeline over all proteins with monoisotopic mass distance analysis |
 | 15 | Benchmark against Envemind |
@@ -215,11 +215,11 @@ files (`.csv`, `.txt`) are saved to `results/`.
 
 The main outputs are:
 
-- `step13_protein_formulas.txt` — molecular formulas for up to 6000 proteins
-- `step14_monoisotopic_distances.txt` — per-protein monoisotopic mass distances
-- `step14_distance_summary.csv` — aggregate reconstruction statistics
-- `step15_comparison_results.csv` — per-protein comparison with Envemind
-- `step15_comparison_summary.csv` — benchmark summary statistics
+- `step13_protein_formulas.txt`: molecular formulas for up to 6000 proteins
+- `step14_monoisotopic_distances.txt`: per-protein monoisotopic mass distances
+- `step14_distance_summary.csv`: aggregate reconstruction statistics
+- `step15_comparison_results.csv`: per-protein comparison with Envemind
+- `step15_comparison_summary.csv`: benchmark summary statistics
 
 The intermediate steps also generate diagnostic figures and data files
 corresponding to the analyses described above.
