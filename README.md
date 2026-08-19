@@ -60,9 +60,10 @@ compare isotopic distributions.
 └── requirements.txt
 ```
 
-`data/`, `figures/`, and `results/` are not part of the repository.
+`data/`, `figures/`, and `results/` are not part of the repository.  
 `figures/` and `results/` are created automatically when the pipeline
-runs, `data/` must be created manually (see Data below).
+runs.   
+`data/` must be created manually (see Data below).
 
 All `stepNN_*.py` scripts and `run_all.py` are located in `scripts/`.
 
