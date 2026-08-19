@@ -54,11 +54,12 @@ compare isotopic distributions.
 │   ├── step00_shared_utils.py
 │   ├── ...
 │   └── step16_visualisation_5d.py
-├── data/
-│   └── uniprot_sprot.fasta.gz
-├── figures/
-└── results/
+└── data/
+    └── uniprot_sprot.fasta.gz   # not included in the repo, see Data below
 ```
+
+`figures/` and `results/` are created automatically when the pipeline
+runs and are not part of the repository.
 
 All `stepNN_*.py` scripts and `run_all.py` are located in `scripts/`.
 
@@ -96,21 +97,14 @@ https://git-scm.com/downloads
 
 ## Data
 
-The UniProt Swiss-Prot FASTA file required by Step 13 is included in the
-repository under:
-
-```text
-data/uniprot_sprot.fasta.gz
-```
-
-No additional download or `--fasta` argument is required when running
-the pipeline with the default settings. The file is automatically used
-by `run_all.py` through its default `--fasta` path.
-
-The FASTA file is not included in the repository due to it's size and can be
-downloaded from UniProt:
+The UniProt Swiss-Prot FASTA file required by Step 13 is not
+included in the repository due to its size. Download it from:
 
 https://www.uniprot.org/downloads#uniprotkb
+
+and place it at `data/uniprot_sprot.fasta.gz`. This is also the
+default `--fasta` path used by `run_all.py`, so no extra argument is
+needed once the file is in place.
 
 ## How to run
 
