@@ -63,7 +63,7 @@ compare isotopic distributions.
 `data/`, `figures/`, and `results/` are not part of the repository.  
 `figures/` and `results/` are created automatically when the pipeline
 runs.   
-`data/` must be created manually (see Data below).
+`data/` must be created manually (see [Data](#data) below).
 
 All `stepNN_*.py` scripts and `run_all.py` are located in `scripts/`.
 
@@ -84,9 +84,8 @@ pip install -r requirements.txt
 The main dependencies are IsoSpecPy, NumPy, matplotlib, pandas, and
 `envemind` (Step 15 only).
 
-`envemind` is installed directly from its GitHub repository:
-
-https://github.com/PiotrRadzinski/envemind
+`envemind` is installed directly from its
+[GitHub repository](https://github.com/PiotrRadzinski/envemind).
 
 It is included in `requirements.txt` as:
 
@@ -97,18 +96,16 @@ git+https://github.com/PiotrRadzinski/envemind.git
 Therefore, a working `git` installation is required before installing
 the dependencies. If `git` is not available, it can be installed from:
 
-https://git-scm.com/downloads
+[git-scm.com/downloads](https://git-scm.com/downloads)
 
 ## Data
 
 The UniProt Swiss-Prot FASTA file required by Step 13 is not
 included in the repository due to its size. 
 
-Create a `data/` directory at the project root, download the file from:
-
-https://www.uniprot.org/downloads#uniprotkb
-
-and place it at `data/uniprot_sprot.fasta.gz`.   
+Create a `data/` directory at the project root, download the file from
+[UniProt](https://www.uniprot.org/downloads#uniprotkb), and place it
+at `data/uniprot_sprot.fasta.gz`.  
 
 This is also the default `--fasta` path used by `run_all.py`, 
 so no extra argument is needed once the file is in place.
