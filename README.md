@@ -1,6 +1,6 @@
 # Prediction of monoisotopic peak masses in large biopolymers
 
-**Master's Thesis project**
+**Master's Thesis code repository**
 
 Barbara Pawłowska (477701)  
 Bioinformatics and Systems Biology  
@@ -8,7 +8,7 @@ University of Warsaw
 
 Supervisor: Michał Startek, PhD
 
-## About the project
+## About the thesis
 
 This repository contains the computational pipeline developed for the
 Master's Thesis *Prediction of monoisotopic peak masses in large biopolymers*.
