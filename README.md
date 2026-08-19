@@ -94,9 +94,9 @@ git+https://github.com/PiotrRadzinski/envemind.git
 ```
 
 Therefore, a working `git` installation is required before installing
-the dependencies. If `git` is not available, it can be installed from:
+the dependencies. 
 
-[git-scm.com/downloads](https://git-scm.com/downloads)
+If `git` is not available, it can be installed from: [git-scm.com/downloads](https://git-scm.com/downloads)
 
 ## Data
 
