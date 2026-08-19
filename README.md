@@ -223,4 +223,4 @@ corresponding to the analyses described above.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE).
+MIT License - see [LICENSE](LICENSE).
