@@ -54,12 +54,15 @@ compare isotopic distributions.
 │   ├── step00_shared_utils.py
 │   ├── ...
 │   └── step16_visualisation_5d.py
-└── data/
-    └── uniprot_sprot.fasta.gz   # not included in the repo, see Data below
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
+`data/`, `figures/`, and `results/` are not part of the repository.
 `figures/` and `results/` are created automatically when the pipeline
-runs and are not part of the repository.
+runs, `data/` must be created manually (see Data below).
 
 All `stepNN_*.py` scripts and `run_all.py` are located in `scripts/`.
 
