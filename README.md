@@ -107,9 +107,9 @@ directory at the project root, download the file from:
 
 https://www.uniprot.org/downloads#uniprotkb
 
-and place it at `data/uniprot_sprot.fasta.gz`. This is also the
-default `--fasta` path used by `run_all.py`, so no extra argument is
-needed once the file is in place.
+and place it at `data/uniprot_sprot.fasta.gz`.   
+This is also the default `--fasta` path used by `run_all.py`, 
+so no extra argument is needed once the file is in place.
 
 ## How to run
 
