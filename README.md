@@ -3,7 +3,7 @@
 **Master's Thesis code repository**
 
 Barbara Pawłowska   
-Bioinformatics and Systems Biology, University of Warsaw  
+*Bioinformatics and Systems Biology*, University of Warsaw  
 
 Supervisor: Michał Startek, PhD
 
