@@ -102,7 +102,8 @@ https://git-scm.com/downloads
 ## Data
 
 The UniProt Swiss-Prot FASTA file required by Step 13 is not
-included in the repository due to its size. Download it from:
+included in the repository due to its size. Create a `data/`
+directory at the project root, download the file from:
 
 https://www.uniprot.org/downloads#uniprotkb
 
