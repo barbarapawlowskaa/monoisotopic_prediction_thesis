@@ -177,7 +177,7 @@ laptop. A full unrestricted Swiss-Prot analysis
 (`--max-length 0` with a larger `--max-proteins` value) is
 more computationally demanding.
 
-## Pipeline Steps
+## Pipeline steps
 
 | Step | Description |
 |------|-------------|
