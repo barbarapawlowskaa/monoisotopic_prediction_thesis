@@ -100,7 +100,7 @@ If `git` is not available, it can be installed from [git-scm.com/downloads](http
 
 ## Data
 
-The UniProt Swiss-Prot FASTA file required by Step 13 is not
+The UniProt Swiss-Prot FASTA file required by `step13` is not
 included in the repository due to its size. 
 
 Create a `data/` directory at the project root, download the file from
