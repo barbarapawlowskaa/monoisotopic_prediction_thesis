@@ -181,23 +181,24 @@ more computationally demanding.
 
 | Step | Description |
 |------|-------------|
-| 00 | Shared utilities (e.g. formula parsing, spectrum variance, peak aggregation) |
+| 00 | Shared utilities (e.g. formula parsing, peak aggregation) |
 | 01 | Averagine scaling model |
-| 02 | IsoSpec & Wasserstein distance check (bovine insulin vs. mock spectrum) and visualization |
-| 03 | Averagine fit to insulin via ±5 H grid search using Wasserstein distance |
-| 04 | Per-element fractional mass defect (physical motivation for V3) |
-| 05 | Baryon composition analysis, insulin vs. its Averagine approximation |
-| 06 | Monte Carlo search for the maximum defect direction orthogonal to Averagine |
-| 07 | Early 2D model (Averagine/mass + variance gradient) |
-| 08 | Core module, constructs V1, V2, and V3 via Gram–Schmidt |
-| 09 | Basis diagnostics, V1+V2 vs. V1+V3 submodels and unit-step sensitivity |
-| 10 | Unit-step sensitivity at 1x and 10x insulin scale |
-| 11 | Completion of the basis with V4 and V5 obtained from the SVD null space |
-| 12 | Full 5D reconstruction with the closed-form α & β solution |
-| 13 | UniProt FASTA parsing and molecular formula generation |
-| 14 | Full 5D pipeline over all proteins with monoisotopic mass distance analysis |
+| 02 | IsoSpec check via Wasserstein distance vs. a mock spectrum |
+| 03 | Averagine fit to insulin via ±5 H grid search |
+| 04 | Per-element mass defect motivating V3 |
+| 05 | Baryon composition comparison between insulin and Averagine |
+| 06 | Monte Carlo search for the max-defect direction orthogonal to Averagine |
+| 07 | Early 2D model combining Averagine/mass and variance gradient |
+| 08 | Core module constructing V1, V2 and V3 via Gram–Schmidt |
+| 09 | Basis diagnostics comparing V1+V2 and V1+V3 submodels |
+| 10 | Unit-step sensitivity across 1x and 10x insulin scale |
+| 11 | Basis completion with V4 and V5 from the SVD null space |
+| 12 | Full 5D reconstruction using the closed-form α and β solution |
+| 13 | UniProt FASTA parsing into molecular formulas |
+| 14 | Full 5D pipeline across all proteins with distance analysis |
 | 15 | Benchmark against Envemind |
 | 16 | Standalone conceptual 5D basis diagram |
+
 
 Each script contains a detailed docstring describing its purpose and
 implementation.
