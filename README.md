@@ -183,14 +183,14 @@ more computationally demanding.
 |------|-------------|
 | 00 | Shared utilities (e.g. formula parsing, spectrum variance, peak aggregation) |
 | 01 | Averagine scaling model |
-| 02 | IsoSpec & Wasserstein distance check (bovine insulin vs. mock spectrum) |
+| 02 | IsoSpec & Wasserstein distance check (bovine insulin vs. mock spectrum) and visualization |
 | 03 | Averagine fit to insulin via ±5 H grid search using Wasserstein distance |
 | 04 | Per-element fractional mass defect (physical motivation for V3) |
 | 05 | Baryon composition analysis, insulin vs. its Averagine approximation |
 | 06 | Monte Carlo search for the maximum defect direction orthogonal to Averagine |
-| 07 | Early 2D model (Averagine/mass vector + variance gradient) |
+| 07 | Early 2D model (Averagine/mass + variance gradient) |
 | 08 | Core module, constructs V1, V2, and V3 via Gram–Schmidt |
-| 09 | Basis diagnostics, V1+V2 vs. V1+V3 sub-models and unit-step sensitivity |
+| 09 | Basis diagnostics, V1+V2 vs. V1+V3 submodels and unit-step sensitivity |
 | 10 | Unit-step sensitivity at 1x and 10x insulin scale |
 | 11 | Completion of the basis with V4 and V5 obtained from the SVD null space |
 | 12 | Full 5D reconstruction with the closed-form α & β solution |
