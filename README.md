@@ -81,7 +81,7 @@ Python 3.10 or higher is required.
 pip install -r requirements.txt
 ```
 
-The main dependencies are IsoSpecPy, NumPy, matplotlib, pandas, and
+The main dependencies are IsoSpecPy, NumPy, matplotlib 3.9.2, pandas, and
 `envemind` (`step15` only).
 
 `envemind` is installed directly from its
