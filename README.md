@@ -183,7 +183,7 @@ more computationally demanding.
 |------|-------------|
 | 00 | Shared utilities (e.g. formula parsing, peak aggregation) |
 | 01 | Averagine scaling model |
-| 02 | IsoSpec check via Wasserstein distance vs. a mock spectrum & standalone visualization|
+| 02 | IsoSpec/Wasserstein distance check with mock-spectrum comparison |
 | 03 | Averagine fit to insulin via ±5 H grid search |
 | 04 | Per-element mass defect motivating V3 |
 | 05 | Baryon composition comparison between insulin and Averagine |
